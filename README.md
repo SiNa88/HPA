@@ -5,11 +5,11 @@ HorizontalPodAutoscaler Walkthrough
 
 * ```nano nginx.yaml```
 
-* ```kubectl apply -f nginx.yaml```
+* ```kubectl apply -f [nginx.yaml](https://raw.githubusercontent.com/SiNa88/HPA/main/nginx.yaml)```
 
 * ```nano nginx-hpa.yaml```
 
-* ```kubectl apply -f [nginx-hpa.yaml]!(https://raw.githubusercontent.com/SiNa88/HPA/main/nginx-hpa.yaml)```
+* ```kubectl apply -f [nginx-hpa.yaml](https://raw.githubusercontent.com/SiNa88/HPA/main/nginx-hpa.yaml)```
 
 * ```kubectl get hpa```
 
