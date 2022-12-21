@@ -11,4 +11,9 @@ HorizontalPodAutoscaler Walkthrough
 
 ```kubectl apply -f nginx-hpa.yaml```
 
+```kubectl get hpa```
+
+```NAME    REFERENCE          TARGETS         MINPODS   MAXPODS   REPLICAS   AGE```
+```nginx   Deployment/nginx   <unknown>/50%   1         10        3          19h```
+
 ```kubectl get hpa nginx -o yaml```
