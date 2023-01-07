@@ -20,3 +20,5 @@ This repository is a local test based on the commands in [GKE](https://cloud.goo
   * ```nginx   Deployment/nginx   <unknown>/50%   1         10        3          19h```
 
 * ```kubectl get hpa nginx -o yaml```
+
+* ```python3.9 new-resource.py```
