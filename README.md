@@ -21,4 +21,6 @@ This repository is a local test based on the commands in [GKE](https://cloud.goo
 
 * ```kubectl get hpa nginx -o yaml```
 
+* Download the project under this repository: [Flask](https://github.com/SiNa88/flask_k8s).
+
 * ```python3.9 new-resource.py```
