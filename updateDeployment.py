@@ -29,7 +29,6 @@ def nodes_available():
     return ready_nodes
 
 def scale():
-    print(nodes_available())
     apps_v1 = client.AppsV1Api()
     #autoscaler_status = requests.get(f"http://10.107.50.125:5000/").json()
     #print (autoscaler_status)
@@ -118,6 +117,8 @@ def get_resource_requests():
     return resource_requests
 
 def main():
+    print(nodes_available())
+    print()
     scale()
     print()
     call(["kubectl", "get", "deployments.apps"])
