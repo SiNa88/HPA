@@ -72,8 +72,8 @@ def update_deployment(deployment_name: str, cpu_limit: int, memory_limit: int,
     # updates cpu and memory limits
     #print (resource_requests["cpu"]," ",resource_requests["memory"])
     new_resources = client.V1ResourceRequirements(
-        #requests={"cpu": resource_requests["cpu"], "memory": resource_requests["memory"]},
-        requests={"cpu": f"{cpu_limit}m", "memory": f"{memory_limit}Mi"},
+        requests={"cpu": resource_requests["cpu"], "memory": resource_requests["memory"]},
+        #requests={"cpu": f"{cpu_limit}m", "memory": f"{memory_limit}Mi"},
         limits={"cpu": f"{cpu_limit}m", "memory": f"{memory_limit}Mi"}
     )
     deployment.spec.template.spec.containers[0].resources = new_resources
