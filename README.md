@@ -24,3 +24,5 @@ This repository is a local test based on the commands in [GKE](https://cloud.goo
 * Deploy a sample [Flask](https://github.com/SiNa88/flask_k8s).
 
 * ```python3.9 updateDeployment.py```
+
+* [Output](https://github.com/SiNa88/HPA/blob/main/update-deployment.png)
