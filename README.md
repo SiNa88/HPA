@@ -1,5 +1,5 @@
 # HPA
-Walkthrough of HorizontalPodAutoscaler in Kubernetes
+A walk through the horizontal pod autoscaler in Kubernetes
 
 ## Configuring horizontal Pod autoscaling
 
