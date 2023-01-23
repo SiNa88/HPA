@@ -19,7 +19,7 @@ prom = PrometheusConnect()
 config.load_kube_config()
 v1=client.CoreV1Api()
 
-def nodes_available():
+def nodes_available() -> list:
     ready_nodes = []
     for n in v1.list_node().items:
             for status in n.status.conditions:
@@ -28,7 +28,7 @@ def nodes_available():
     #print("available nodes: ",ready_nodes)
     return ready_nodes
 
-def scale():
+def scale() -> None:
     apps_v1 = client.AppsV1Api()
     #autoscaler_status = requests.get(f"http://10.107.50.125:5000/").json()
     #print (autoscaler_status)
@@ -59,7 +59,7 @@ def update_deployment(deployment_name: str, cpu_limit: int, memory_limit: int,
       number_of_replicas: int:
       replace: bool:
     Returns:
-      None
+      kubernetes.client.V1Deployment
     """
     # init API
     config.load_kube_config()
@@ -103,7 +103,7 @@ def update_deployment(deployment_name: str, cpu_limit: int, memory_limit: int,
             logging.info(f"Error while deployment: {err}")
     return deployment
 
-def get_resource_requests():
+def get_resource_requests() -> dict:
     apps_v1 = client.AppsV1Api()
     resource_requests = dict()
     # read deployment
